@@ -1,1 +1,15 @@
 <p>user-login works!</p>
+
+<label>
+  Username: <input type="text" [formControl]="username" /><br>
+  Password: <input type="password" [formControl]="password" />
+</label>
+<p>
+  <br />
+  Value: {{ username.value }}
+  Value: {{ password.value }}
+</p>
+
+<p>
+  <button (click)="login()">Login</button>
+</p>
