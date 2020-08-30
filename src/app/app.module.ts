@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthService } from './core/auth.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
