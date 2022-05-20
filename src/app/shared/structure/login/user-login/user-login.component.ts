@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '@core/auth.service';
-import { ReactiveFormsModule, FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
+import { AuthService } from 'src/app/core/auth.service';
 
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.component.html',
-  styleUrls: ['./user-login.component.css']
+  styleUrls: ['./user-login.component.scss']
 })
 export class UserLoginComponent implements OnInit {
   username = new FormControl('');
@@ -18,8 +18,8 @@ export class UserLoginComponent implements OnInit {
 
   login() {
     sessionStorage.setItem('username', this.username.value);
-    this.username = null;
-    this.password = null;
+    this.username;
+    this.password;
   }
 
 
